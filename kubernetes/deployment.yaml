@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-app
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      containers:
+        - name: django-container
+          image: sarahmackey42/peregrine-devops-task:main  # Replace with your actual image
+          ports:
+            - containerPort: 8000
+          command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
