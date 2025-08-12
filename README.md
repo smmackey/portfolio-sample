@@ -2,7 +2,7 @@
 Unfortunately the near entirety of my portfolio of work is owned by the previous companies I've worked for, so to showcase some of my experience I've created this sample repository using some of the skills and ideas from past projects. The main application is just a bare bones Django app, but the focus of this repo is mostly on the infrastructure I've created around it.
 
 ## Product Development Lifecycle Architecture
-<img width="773" height="746" alt="Image" src="https://github.com/user-attachments/assets/01613ca6-db88-47de-9543-cf4018d6fb0c" />
+<img width="2150" height="380" alt="Image" src="https://github.com/user-attachments/assets/605c7266-b5d4-4ef9-8219-c2c94fb648ce" />
 
 ## CI/CD Pipeline
 ### build.yml
@@ -43,5 +43,5 @@ Available commands:
 In addition to the docker-compose setup, I've created k8s manifests for both the deployment and service as well as a minikube guide for local development. More can be found in the `/kubernetes` directory.
 
 ## Software Release Channels
-<img width="2150" height="380" alt="Image" src="https://github.com/user-attachments/assets/605c7266-b5d4-4ef9-8219-c2c94fb648ce" />
+<img width="773" height="746" alt="Image" src="https://github.com/user-attachments/assets/01613ca6-db88-47de-9543-cf4018d6fb0c" />
 
