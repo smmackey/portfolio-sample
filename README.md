@@ -1,6 +1,9 @@
 # portfolio-sample
 Unfortunately the near entirety of my portfolio of work is owned by the previous companies I've worked for, so to showcase some of my experience I've created this sample repository using some of the skills and ideas from past projects. The main application is just a bare bones Django app, but the focus of this repo is mostly on the infrastructure I've created around it.
 
+## Product Development Lifecycle Architecture
+<img width="773" height="746" alt="Image" src="https://github.com/user-attachments/assets/01613ca6-db88-47de-9543-cf4018d6fb0c" />
+
 ## CI/CD Pipeline
 ### build.yml
 This file creates a GitHub Action that builds our Docker image and pushes to a repository in Docker Hub from my personal namespace. (Secrets attached to this repository correspond with my personal login.) It checks out the repository, authenticates to the hub, then runs a `docker build` and pushes our image.
@@ -36,6 +39,9 @@ Available commands:
  - test - runs Pytest tests
 
 
-### Kubernetes
+## Kubernetes
 In addition to the docker-compose setup, I've created k8s manifests for both the deployment and service as well as a minikube guide for local development. More can be found in the `/kubernetes` directory.
+
+## Software Release Channels
+<img width="2150" height="380" alt="Image" src="https://github.com/user-attachments/assets/605c7266-b5d4-4ef9-8219-c2c94fb648ce" />
 
