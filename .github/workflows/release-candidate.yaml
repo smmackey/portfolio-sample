@@ -1,9 +1,8 @@
 name: Bi-monthly release candidate build and release
 
 on:
-  # schedule:
-  #   cron: "0 1 * * 2/2"
-  workflow_dispatch:
+  schedule:
+    cron: "0 1 * * 2/2"
 
 jobs:
   build:
