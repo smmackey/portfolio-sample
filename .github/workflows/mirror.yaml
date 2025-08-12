@@ -1,0 +1,17 @@
+name: Mirroring
+
+on:
+  workflow_dispatch:
+
+jobs:
+  to_foundries:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: foundriesio/mirror-action@main
+        with:
+          REMOTE: "https://source.foundries.io/factories/<FACTORY-NAME>/containers.git"
+          GIT_ACCESS_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+          PUSH_ALL_REFS: "false"
