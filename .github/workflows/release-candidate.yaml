@@ -7,19 +7,19 @@ on:
 
 jobs:
   build:
-    name: Create Release
+    name: Create Release Candidate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Create Release
         id: create_release
-        uses: comnoco/create-release@v2
+        uses: comnoco/create-release-action@v2.0.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: release-candidate-tag-${{ vars.VERSION }}
+          release_name: release-candidate-${{ vars.VERSION }}
           body: |
             Changes in this Release
             - First Change
